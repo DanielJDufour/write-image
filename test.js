@@ -9,7 +9,7 @@ const writeImage = require("./write-image");
 test("jpg to png", async ({ eq }) => {
   const jpg = findAndRead("flower.jpg");
   const { height, width, pixels } = await readim({ data: jpg });
-  const result = await writeImage({ data: pixels, debug: false, format: "png", height, width });
+  const result = writeImage({ data: pixels, debug: false, format: "png", height, width });
   fs.writeFileSync("jpg-to-png.png", result.data);
   eq(result.height, height);
   eq(result.width, width);
@@ -19,7 +19,7 @@ test("jpg to png", async ({ eq }) => {
 test("png to jpg", async ({ eq }) => {
   const png = findAndRead("flower.png");
   const { height, width, pixels } = await readim({ data: png });
-  const result = await writeImage({ data: pixels, debug: false, format: "jpg", height, width });
+  const result = writeImage({ data: pixels, debug: false, format: "jpg", height, width });
   fs.writeFileSync("png-to-jpg.jpg", result.data);
   eq(result.height, height);
   eq(result.width, width);

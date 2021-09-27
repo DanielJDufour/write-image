@@ -2,7 +2,7 @@ const jpeg = require("jpeg-js");
 const { PNG } = require("pngjs");
 const toImageData = require("to-image-data");
 
-module.exports = async function writeImage({ data, debug = false, format, height, width, quality = 85 }) {
+module.exports = function writeImage({ data, debug = false, format, height, width, quality = 85 }) {
   if (!format) throw new Error(`[write-image] please specify a format, "JPG", or "PNG`);
 
   // normalize format
