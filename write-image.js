@@ -12,14 +12,18 @@ module.exports = async function writeImage({ data, debug = false, format, height
   const imageData = toImageData({ data, height, width });
   if (debug) console.log(`[write-image] image data is`, imageData);
 
+  let result;
   if (format === "PNG") {
     const png = new PNG({ filterType: 4, height, width });
     png.data = imageData.data;
     if (debug) console.log(`[write-image] png is`, png);
     const buffer = PNG.sync.write(png);
-    return { data: buffer, height, width };
+    result = { data: buffer, height, width };
   } else if (format === "JPG") {
-    const { data, height, width } = jpeg.encode(imageData, quality).data;
-    return { data, height, width };
+    const encoded = jpeg.encode(imageData, quality).data;
+    if (debug) console.log("`[write-image] jpeg.encode returned", encoded);
+    result = { data: encoded, height, width };
   }
+  if (debug) console.log(`[write-image] returning`, result);
+  return result;
 };
