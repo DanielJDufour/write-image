@@ -1,0 +1,39 @@
+{
+  "name": "write-image",
+  "version": "0.0.0",
+  "description": "Write an Image",
+  "main": "write-image.js",
+  "files": [
+    "write-image.js"
+  ],
+  "scripts": {
+    "format": "npx prettier --arrow-parens=avoid --print-width=120 --trailing-comma=none --write *.js",
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielJDufour/write-image.git"
+  },
+  "keywords": [
+    "image",
+    "jpg",
+    "png"
+  ],
+  "author": "Daniel J. Dufour",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/DanielJDufour/write-image/issues"
+  },
+  "homepage": "https://github.com/DanielJDufour/write-image#readme",
+  "dependencies": {
+    "jpeg-js": "^0.4.3",
+    "pngjs": "^6.0.0",
+    "to-image-data": "^0.0.1"
+  },
+  "devDependencies": {
+    "find-and-read": "^1.0.0",
+    "flug": "^2.1.0",
+    "readim": "^0.0.2",
+    "xdim": "^1.2.1"
+  }
+}
