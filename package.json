@@ -28,7 +28,7 @@
   "dependencies": {
     "jpeg-js": "^0.4.3",
     "pngjs": "^6.0.0",
-    "to-image-data": "^0.0.1"
+    "to-image-data": "^0.0.2"
   },
   "devDependencies": {
     "find-and-read": "^1.0.0",
