@@ -7,8 +7,9 @@
     "write-image.js"
   ],
   "scripts": {
+    "clean": "rimraf *.jpg *.png",
     "format": "npx prettier --arrow-parens=avoid --print-width=120 --trailing-comma=none --write *.js",
-    "test": "node test.js"
+    "test": "npm run clean && node test.js"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
     "find-and-read": "^1.0.0",
     "flug": "^2.1.0",
     "readim": "^0.0.2",
+    "rimraf": "^3.0.2",
     "xdim": "^1.2.1"
   }
 }
