@@ -1,6 +1,6 @@
 {
   "name": "write-image",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Write an Image",
   "main": "write-image.js",
   "files": [
