@@ -3,13 +3,15 @@
   "version": "0.0.5",
   "description": "Write an Image",
   "main": "write-image.js",
+  "tyoes": "write-image.d.ts",
   "files": [
-    "write-image.js"
+    "write-image.js",
+    "write-image.d.ts"
   ],
   "scripts": {
     "clean": "rimraf *.jpg *.png",
     "format": "npx prettier --arrow-parens=avoid --print-width=120 --trailing-comma=none --write *.js",
-    "test": "npm run clean && node test.js"
+    "test": "npm run clean && node test.js && npx ts-node ./test.ts"
   },
   "repository": {
     "type": "git",
@@ -27,15 +29,15 @@
   },
   "homepage": "https://github.com/DanielJDufour/write-image#readme",
   "dependencies": {
-    "jpeg-js": "^0.4.3",
+    "jpeg-js": "^0.4.4",
     "pngjs": "^6.0.0",
     "to-image-data": "^0.0.2"
   },
   "devDependencies": {
-    "find-and-read": "^1.0.0",
-    "flug": "^2.1.0",
+    "find-and-read": "^1.2.0",
+    "flug": "^2.3.1",
     "readim": "^0.0.2",
     "rimraf": "^3.0.2",
-    "xdim": "^1.2.1"
+    "xdim": "^1.6.0"
   }
 }
