@@ -16,4 +16,4 @@ export default function writeImage({
   data: ArrayBuffer | Buffer;
   height: number;
   width: number;
-}
+};

@@ -32,10 +32,12 @@ function writeImage({ data, debug = false, format, height, width, quality = 85 }
   }
   if (debug) console.log(`[write-image] returning`, result);
   return result;
-};
+}
 
 if (typeof define === "function" && define.amd) {
-  define(function() { return writeImage; });
+  define(function () {
+    return writeImage;
+  });
 }
 
 if (typeof module === "object") {

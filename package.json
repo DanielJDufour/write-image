@@ -10,7 +10,8 @@
   ],
   "scripts": {
     "clean": "rimraf *.jpg *.png",
-    "format": "npx prettier --arrow-parens=avoid --print-width=120 --trailing-comma=none --write *.js",
+    "f": "npm run format",
+    "format": "npx prettier --arrow-parens=avoid --print-width=120 --trailing-comma=none --write *.js *.ts",
     "test": "npm run clean && node test.js && npx ts-node ./test.ts"
   },
   "repository": {
