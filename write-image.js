@@ -1,4 +1,3 @@
-const { write } = require("fs");
 const jpeg = require("jpeg-js");
 const { PNG } = require("pngjs");
 const toImageData = require("to-image-data");

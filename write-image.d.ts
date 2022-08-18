@@ -6,7 +6,16 @@ export default function writeImage({
   width,
   quality
 }: {
-  data: number[] | number[][] | number[][][];
+  data:
+    | number[]
+    | number[][]
+    | number[][][]
+    | Uint8Array
+    | Uint8Array[]
+    | Uint8Array[][]
+    | Uint8ClampedArray
+    | Uint8ClampedArray[]
+    | Uint8ClampedArray[][];
   debug?: boolean;
   format: "jpeg" | "JPEG" | "jpg" | "JPG" | "png" | "PNG";
   height: number;
